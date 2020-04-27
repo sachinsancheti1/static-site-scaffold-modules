@@ -168,8 +168,8 @@ function respimgSetup(userConfig = {}) {
 
                 const imgHTML = $.html(image);
                 let img = `<picture>`;
-                img += `<source srcset="${webpSrcset}" sizes="${respSizes}" type="image/webp">`;
-                img += `<source srcset="${baseSrcset}" sizes="${respSizes}" type="${type.mime}">`;
+                img += `<source data-srcset="${webpSrcset}" sizes="${respSizes}" type="image/webp">`;
+                img += `<source data-srcset="${baseSrcset}" sizes="${respSizes}" type="${type.mime}">`;
                 img += `${imgHTML}</picture>`;
                 $(image).replaceWith(img);
               }
